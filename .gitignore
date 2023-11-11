@@ -1,0 +1,68 @@
+# dataset
+annotations_trainval2017.zip
+val2017.zip
+train2017.zip
+
+# envs
+FastInst-main/detectron2
+FastInst-dis/detectron2
+FastInst-SQR/detectron2
+# output dir
+output
+instant_test_output
+inference_test_output
+detectron2
+FastInst-dis/datasets/coco
+FastInst-main/datasets/coco
+FastInst-SQR/datasets/coco
+NVIDIA-Linux-x86_64-535.129.03.run
+
+*.DS_Store
+*.png
+*.json
+*.diff
+*.jpg
+!/projects/DensePose/doc/images/*.jpg
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.pyd
+*.so
+*.dll
+*.egg-info/
+build/
+dist/
+wheels/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+*.ts
+model_ts*.txt
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# editor settings
+.idea
+.vscode
+_darcs
+
+# project dirs
+*/detectron2/model_zoo/configs
+/datasets/*
+!/datasets/*.*
+/projects/*/datasets
+/models
+/snippet
+/detectron2/*

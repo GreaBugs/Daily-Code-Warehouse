@@ -1,0 +1,2 @@
+bash /home/baoyue.shen/fastinst/run_fastinst.sh /home/baoyue.shen/fastinst/FastInst-dis/train_net.py
+bash /home/baoyue.shen/fastinst/run_fastinst.sh /home/baoyue.shen/fastinst/FastInst-main/train_net.py

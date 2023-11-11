@@ -1,0 +1,33 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "abab6a7dc516f57dcf448df768332f0c790da222813cd37afd68c76efb484439"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pip_conf_index_global",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": false
+            },
+            {
+                "name": "opentuna",
+                "url": "https://opentuna.cn/pypi/web/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "pytorch": {
+            "hashes": [
+                "sha256:a6915d372c085a02eceebf59d16cbcc18a2693ac3487a53e3cc8be31fee65079"
+            ],
+            "index": "opentuna",
+            "version": "==1.0.2"
+        }
+    },
+    "develop": {}
+}
