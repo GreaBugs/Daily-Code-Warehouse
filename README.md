@@ -1,8 +1,8 @@
 Save some commonly used codes by baoyue.shen. Only part of the code here
 
-All theoretical notes and codes can be found in https://cariclpajpr.feishu.cn/wiki/ETMfwlw5aiS8TykTAQFcfXZVnRh
+所有的理论笔记和代码： [深度学习理论笔记和代码](https://cariclpajpr.feishu.cn/wiki/ETMfwlw5aiS8TykTAQFcfXZVnRh))
 
-Project1 Warehouse：https://github.com/GreaBugs/CLC.git
+Project1 Warehouse：[实例分割论文](https://github.com/GreaBugs/CLC.git) 
 
 Project2 Warehouse：[Java开发项目1](https://github.com/GreaBugs/Learn_NIO.git)
 
