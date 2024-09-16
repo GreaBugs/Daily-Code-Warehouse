@@ -6,4 +6,6 @@ Project1 Warehouse：[实例分割论文](https://github.com/GreaBugs/CLC.git)
 
 Project2 Warehouse：[Java开发项目1](https://github.com/GreaBugs/Learn_NIO.git)
 
-Project3 Warehouse：暂不开放
+Project3 Warehouse：[DDPM](https://github.com/GreaBugs/Learn_DDPM.git)
+
+Project4 Warehouse：暂不开放
