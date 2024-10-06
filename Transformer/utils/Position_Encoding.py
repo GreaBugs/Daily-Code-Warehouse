@@ -2,9 +2,13 @@ import torch
 import torch.nn as nn
 import math
 import matplotlib.pyplot as plt
+from Python._logging import create_logger
 
 
-def positional_encoding(d_model, length):
+logger = create_logger("positional_encoding")
+
+
+def positional_encoding(d_model, length=5000):
     """
     :param d_model: dimension of the token
     :param length: (maximum) token number
@@ -21,3 +25,11 @@ def positional_encoding(d_model, length):
     pe[:, 1::2] = torch.cos(position.float() * div_term)
 
     return pe
+
+
+if __name__ == "__main__":
+    length = 10
+    d_model = 256
+    input_data = torch.randn((2, length, d_model))
+    out = input_data + positional_encoding(d_model, length)
+    logger.info(f'\n{out}')
