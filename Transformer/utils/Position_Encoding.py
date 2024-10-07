@@ -28,8 +28,9 @@ def positional_encoding(d_model, length=5000):
 
 
 if __name__ == "__main__":
+    bs = 2
     length = 10
     d_model = 256
-    input_data = torch.randn((2, length, d_model))
+    input_data = torch.randn((bs, length, d_model))
     out = input_data + positional_encoding(d_model, length)
-    logger.info(f'\n{out}')
+    logger.info(f'\n{out.shape}')
