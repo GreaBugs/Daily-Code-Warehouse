@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from torch.nn import Conv2d, MaxPool2d, Flatten, Linear, Sequential
 
+
 # LoRA Module for Conv2D
 class LoRAConv2d(nn.Module):
     def __init__(self, in_channels, out_channels, kernel_size, rank=4, stride=1, padding=0):
@@ -16,6 +17,7 @@ class LoRAConv2d(nn.Module):
         output = self.conv(x) + self.lora_B(self.lora_A(x))  # Adding low-rank approximation
         return output
 
+
 # LoRA Module for Linear layers
 class LoRALinear(nn.Module):
     def __init__(self, in_features, out_features, rank=4):
@@ -28,6 +30,7 @@ class LoRALinear(nn.Module):
 
     def forward(self, x):
         return self.linear(x) + self.lora_B(self.lora_A(x))
+
 
 # Modified ShenYue network with LoRA
 class ShenYue(nn.Module):
@@ -49,11 +52,13 @@ class ShenYue(nn.Module):
         output = self.model1(input)
         return output
 
+
 # Function to freeze original layers but allow LoRA to be trainable
 def freeze_original_weights(model):
     for name, param in model.named_parameters():
         if 'lora_A' not in name and 'lora_B' not in name:
             param.requires_grad = False  # Freeze non-LoRA parameters
+
 
 # Load pretrained weights and apply LoRA
 def load_pretrained_and_apply_lora(model, pretrained_weights_path):
@@ -63,6 +68,7 @@ def load_pretrained_and_apply_lora(model, pretrained_weights_path):
 
     # Freeze the original weights except LoRA parameters
     freeze_original_weights(model)
+
 
 # Example usage
 shen_yue_model = ShenYue()
