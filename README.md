@@ -4,6 +4,8 @@ Save some commonly used codes by baoyue.shen. Only part of the code here
 
 所有的理论笔记和代码： [深度学习理论笔记和代码](https://cariclpajpr.feishu.cn/wiki/ETMfwlw5aiS8TykTAQFcfXZVnRh)
 
+Project_now [DeepSpeed](https://github.com/GreaBugs/Learn-DeepSpeed.git)
+
 Project1 Warehouse：[硕士实例分割论文Train-strategy](https://github.com/GreaBugs/Train-strategy.git)
 
 Project2 Warehouse：[Java开发项目1](https://github.com/GreaBugs/Learn_NIO.git)
