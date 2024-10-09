@@ -18,4 +18,4 @@ def cross_entropy(predictions, targets, eps=1e-12):
 	# eps: 防止log(0)输出负无穷大，导致后续计算无法进行
     N = predictions.shape[0]
     # 因为targets是one-hot编码，所以相当于只有为1的那个维度会计算
-    return -np.sum(targets*np.log(predictions+eps)) / N
+    return -np.sum(targets * np.log(predictions + eps)) / N
