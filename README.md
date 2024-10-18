@@ -11,15 +11,15 @@ export HF_ENDPOINT=https://hf-mirror.com
 
 所有的理论笔记和代码： [深度学习理论笔记和代码](https://cariclpajpr.feishu.cn/wiki/ETMfwlw5aiS8TykTAQFcfXZVnRh)
 #### 代码实践
-1. 学术论文
+##### 1. 学术论文
    
 Project1 repository：[硕士实例分割论文Train-strategy](https://github.com/GreaBugs/Train-strategy.git)
 
-3. 当前研究
+##### 2. 当前研究
    
 Project_now : [DeepSpeed](https://github.com/GreaBugs/Learn-DeepSpeed.git)
 
-5. 历史研究
+##### 3. 历史研究
 
 Project1 repository：[Java开发项目1](https://github.com/GreaBugs/Learn_NIO.git)
 
