@@ -150,8 +150,6 @@ if __name__ == '__main__':
     input_padding_mask = torch.zeros(N, (10 * 10 + 5 * 5 + 3 * 3 + 1), dtype=torch.bool)
     
     
-    
-    
     # 创建MSDeformAttn实例
     deform_attn = MSDeformAttn(d_model, n_levels, n_heads, n_points)
 
