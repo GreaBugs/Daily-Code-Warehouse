@@ -33,7 +33,9 @@ Project5 repository：[DDPM](https://github.com/GreaBugs/Learn_DDPM.git)
 
 Project6 repository：[CLIP](https://github.com/GreaBugs/Learn-Clip.git)
 
-Project7 repository：[ImageToPdf](https://github.com/GreaBugs/Tools-ImageToPdf.git)
+Project7 repository：[DINO](https://github.com/GreaBugs/Learn_DINO)
+
+Project8 repository：[ImageToPdf](https://github.com/GreaBugs/Tools-ImageToPdf.git)
 
 Password repository：私密仓库暂不开放
 
