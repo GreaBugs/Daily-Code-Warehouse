@@ -23,14 +23,14 @@ class ShenYuePTuning(nn.Module):
         self.prompt = nn.Parameter(torch.randn(64))  # 可学习的prompt向量
         
         # 原网络的全连接层部分可微调
-        self.fc1 = Linear(1024 + 64, 64)  # 将prompt向量与Flatten层的输出拼接
+        self.fc1 = Linear(784 + 64, 64)  # 将prompt向量与Flatten层的输出拼接
         self.fc2 = Linear(64, 10)
 
-    def forward(self, input):
-        x = self.model1(input)
+    def forward(self, x):
+        x = self.model1(x)  # (64, 784)
 
         # 拼接可学习的prompt向量
-        x = torch.cat((x, self.prompt.expand(x.size(0), -1)), dim=1)
+        x = torch.cat((x, self.prompt.expand(x.size(0), -1)), dim=1)  # torch.Size([64, 848])
 
         # 可微调的全连接层
         x = self.fc1(x)
@@ -39,19 +39,23 @@ class ShenYuePTuning(nn.Module):
         return output
 
 
-model = ShenYuePTuning()
+if __name__ == "__main__":
+    model = ShenYuePTuning()
 
-# 优化器，只更新部分参数 (fc层和prompt)
-optimizer = optim.Adam(
-    filter(lambda p: p.requires_grad, model.parameters()), 
-    lr=1e-4
-)
+    # 优化器，只更新部分参数 (fc层和prompt)
+    optimizer = optim.Adam(
+        filter(lambda p: p.requires_grad, model.parameters()), 
+        lr=1e-4
+    )
 
-criterion = nn.CrossEntropyLoss()
+    criterion = nn.CrossEntropyLoss()
 
-for param in model.model1.parameters():
-    param.requires_grad = False
+    for param in model.model1.parameters():
+        param.requires_grad = False
 
-# 打印模型结构，验证冻结状态
-for name, param in model.named_parameters():
-    print(f"{name}: requires_grad={param.requires_grad}")
+    # 打印模型结构，验证冻结状态
+    for name, param in model.named_parameters():
+        print(f"{name}: requires_grad={param.requires_grad}")
+        
+    image = torch.zeros((3, 224, 224))
+    print(model(image).shape)
