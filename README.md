@@ -37,6 +37,8 @@ Project7 repository：[DINO](https://github.com/GreaBugs/Learn_DINO)
 
 Project8 repository：[ImageToPdf](https://github.com/GreaBugs/Tools-ImageToPdf.git)
 
+Project9 repository：[中国移动研究院](https://github.com/GreaBugs/QWEN_CMRI)
+
 Password repository：私密仓库暂不开放
 
 [个人密钥仓库](https://github.com/GreaBugs/secret_key.git)
